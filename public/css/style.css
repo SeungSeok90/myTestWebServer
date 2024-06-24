@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.card-text p {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
