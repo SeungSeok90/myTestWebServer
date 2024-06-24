@@ -2,20 +2,49 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.card {
-    margin-top: 20px;
+header {
+    background-color: #343a40;
 }
 
-.card-title {
-    margin-bottom: 20px;
+header h1 {
+    margin: 0;
 }
 
-.card-text p {
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar .nav-link {
+    color: #333;
+    padding: 10px;
+}
+
+.sidebar .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+#sidebarToggle {
     margin-bottom: 10px;
 }
 
-form {
-    margin-top: 20px;
+.dashboard, .list {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin-left: 220px; /* Sidebar width */
+    transition: margin-left 0.3s ease;
 }
 
 footer {
@@ -24,6 +53,6 @@ footer {
     padding: 20px 0;
 }
 
-.form-check {
-    margin-bottom: 10px;
+.sidebar.d-none + .dashboard, .sidebar.d-none + .list {
+    margin-left: 0;
 }
