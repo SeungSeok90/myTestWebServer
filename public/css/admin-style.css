@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* 전체 배경색을 흰색으로 설정 */
+    color: #333; /* 텍스트 색상 */
+}
+
+header {
+    background-color: #343a40;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa; /* 사이드바 배경색 */
+}
+
+.sidebar .nav-link {
+    color: #333; /* 사이드바 링크 색상 */
+    padding: 10px;
+}
+
+.sidebar .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+#sidebarToggle {
+    margin-bottom: 10px;
+}
+
+.dashboard, .list {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin-left: 220px; /* Sidebar width */
+    transition: margin-left 0.3s ease;
+    background-color: #fff; /* 블록 배경색 */
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
