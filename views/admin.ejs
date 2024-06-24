@@ -67,21 +67,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% registrations.forEach(registration => { %>
-                            <tr>
-                                <td><%= registration.name %></td>
-                                <td><%= registration.company %></td>
-                                <td><%= registration.department %></td>
-                                <td><%= registration.position %></td>
-                                <td><%= registration.email %></td>
-                                <td><%= registration.phone %></td>
-                                <td><%= registration.attendance %></td>
-                                <td><%= registration.gift %></td>
-                                <td><%= registration.agreement1 ? 'Yes' : 'No' %></td>
-                                <td><%= registration.agreement2 ? 'Yes' : 'No' %></td>
-                                <td><%= registration.created_at %></td>
-                            </tr>
-                            <% }); %>
+                            <% if (registrations && registrations.length > 0) { %>
+                                <% registrations.forEach(registration => { %>
+                                <tr>
+                                    <td><%= registration.name %></td>
+                                    <td><%= registration.company %></td>
+                                    <td><%= registration.department %></td>
+                                    <td><%= registration.position %></td>
+                                    <td><%= registration.email %></td>
+                                    <td><%= registration.phone %></td>
+                                    <td><%= registration.attendance %></td>
+                                    <td><%= registration.gift %></td>
+                                    <td><%= registration.agreement1 ? 'Yes' : 'No' %></td>
+                                    <td><%= registration.agreement2 ? 'Yes' : 'No' %></td>
+                                    <td><%= registration.created_at %></td>
+                                </tr>
+                                <% }); %>
+                            <% } else { %>
+                                <tr>
+                                    <td colspan="11" class="text-center">등록된 인원이 없습니다.</td>
+                                </tr>
+                            <% } %>
                         </tbody>
                     </table>
                 </div>
