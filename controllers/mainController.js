@@ -1,4 +1,3 @@
 exports.getMainPage = (req, res) => {
-    res.render('index', { title: 'Main Page' });
-  };
-  
+  res.render('index'); // 'index' 템플릿을 렌더링
+};

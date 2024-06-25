@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISV Conference Registration</title>
+    <title>사전 등록하기</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
     <header class="bg-dark text-white text-center py-3">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-                <a class="navbar-brand" href="/">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand mx-auto" href="#">
                     <img src="/images/logo_aws_s.png" alt="Logo">
                 </a>
             </nav>
@@ -19,103 +19,54 @@
     </header>
 
     <main class="container my-5">
-        <h2 class="text-center mb-5">사전 등록하기</h2>
-        <div class="tabs">
-            <button class="tab-button" data-target="#day1">Day 1</button>
-            <button class="tab-button" data-target="#day2">Day 2</button>
-        </div>
-        <form action="/register" method="post">
-            <div id="day1" class="agenda-content">
-                <div class="form-group">
-                    <label for="name">이름</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="company">회사</label>
-                    <input type="text" id="company" name="company" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="department">부서</label>
-                    <input type="text" id="department" name="department" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="position">직급</label>
-                    <input type="text" id="position" name="position" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">이메일</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">휴대전화번호</label>
-                    <input type="tel" id="phone" name="phone" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="attendance">참석 여부</label>
-                    <select id="attendance" name="attendance" class="form-control" required>
-                        <option value="yes">예</option>
-                        <option value="no">아니오</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="gift">기념품 선택</label>
-                    <select id="gift" name="gift" class="form-control" required>
-                        <option value="gift1">기념품1</option>
-                        <option value="gift2">기념품2</option>
-                    </select>
-                </div>
-            </div>
-            <div id="day2" class="agenda-content">
-                <!-- Day 2 폼 필드 추가 -->
-                <div class="form-group">
-                    <label for="day2_name">이름</label>
-                    <input type="text" id="day2_name" name="day2_name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="day2_company">회사</label>
-                    <input type="text" id="day2_company" name="day2_company" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="day2_department">부서</label>
-                    <input type="text" id="day2_department" name="day2_department" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="day2_position">직급</label>
-                    <input type="text" id="day2_position" name="day2_position" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="day2_email">이메일</label>
-                    <input type="email" id="day2_email" name="day2_email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="day2_phone">휴대전화번호</label>
-                    <input type="tel" id="day2_phone" name="day2_phone" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="day2_attendance">참석 여부</label>
-                    <select id="day2_attendance" name="day2_attendance" class="form-control" required>
-                        <option value="yes">예</option>
-                        <option value="no">아니오</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="day2_gift">기념품 선택</label>
-                    <select id="day2_gift" name="day2_gift" class="form-control" required>
-                        <option value="gift1">기념품1</option>
-                        <option value="gift2">기념품2</option>
-                    </select>
-                </div>
+        <h2 class="text-center">사전 등록하기</h2>
+        <form id="registrationForm" action="/register" method="POST">
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="agreements">동의 사항</label>
-                <div class="form-check">
-                    <input type="checkbox" id="agreement1" name="agreement1" class="form-check-input">
-                    <label for="agreement1" class="form-check-label">개인정보 수집/이용 동의</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" id="agreement2" name="agreement2" class="form-check-input">
-                    <label for="agreement2" class="form-check-label">개인정보 제3자 제공 동의</label>
-                </div>
+                <label for="company">회사</label>
+                <input type="text" class="form-control" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="department">부서</label>
+                <input type="text" class="form-control" id="department" name="department">
+            </div>
+            <div class="form-group">
+                <label for="position">직급</label>
+                <input type="text" class="form-control" id="position" name="position">
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">연락처</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required pattern="\d{3}-\d{3,4}-\d{4}">
+            </div>
+            <div class="form-group">
+                <label for="attendance">참석 여부</label>
+                <select class="form-control" id="attendance" name="attendance">
+                    <option value="yes">예</option>
+                    <option value="no">아니요</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gift">기념품 선택</label>
+                <select class="form-control" id="gift" name="gift">
+                    <option value="gift1">기념품1</option>
+                    <option value="gift2">기념품2</option>
+                    <option value="gift3">기념품3</option>
+                </select>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="agreement1" name="agreement1" required>
+                <label class="form-check-label" for="agreement1">개인정보 수집/이용 동의</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="agreement2" name="agreement2" required>
+                <label class="form-check-label" for="agreement2">개인정보 제3자 제공 동의</label>
             </div>
             <button type="submit" class="btn btn-primary btn-block">사전 등록하기</button>
         </form>
@@ -125,9 +76,29 @@
         <p class="mb-0">Copyright © 2024 MegazoneCloud Corp. All rights reserved.</p>
     </footer>
 
+    <!-- 모달 팝업 -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">등록 상태</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center" id="modalBodyContent">
+                    <!-- 여기에 메시지가 표시됩니다 -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script> <!-- 메인 JavaScript 파일 추가 -->
+    <script src="/js/register.js"></script>
 </body>
 </html>

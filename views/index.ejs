@@ -6,148 +6,34 @@
     <title>AWS INNOVATE X ACTION</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome 추가 -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> <!-- Leaflet CSS 추가 -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> <!-- Leaflet JS 추가 -->
+</head>    
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-                <a class="navbar-brand" href="#">
-                    <img src="/images/logo_aws_s.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#agenda">Agenda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sponsors">Sponsors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-primary" href="/register">지금 등록하기</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="countdown">
-        <p>Starting in</p>
-        <h1 id="countdown-timer">Loading...</h1>
-    </div>
+    <%- include('components/index/header') %>
+    <%- include('components/index/countdown') %>
+    <%- include('components/index/title') %>
 
     <main class="container my-5 main-content">
-        <div class="header-image">
-            <img src="/images/image.png" alt="AWS INNOVATE X ACTION">
-            <div class="header-text">
-                <h1>INNOVATE X ACTION</h1>
-                <p>Day 1, 2024.07.02 09:00 - 18:00</p>
-                <p>Day 2, 2024.07.03 09:30 - 18:00</p>
-                <p>서울 서초구 신반포로 176<br>JW 메리어트 호텔 서울 3층 살롱 4,5</p>
-            </div>
-        </div>
-
-        <section class="agenda my-5" id="agenda">
-            <h2 class="section-title">Agenda</h2>
-            <div class="tabs">
-                <button class="tab-button active" data-target="#day1">Day 1</button>
-                <button class="tab-button" data-target="#day2">Day 2</button>
-            </div>
-            <div id="day1" class="agenda-content active">
-                <div class="agenda-card">
-                    <h3>Day 1. 09:00 - 18:00</h3>
-                    <p>09:00 - 09:30: 참석자 등록</p>
-                    <p>09:30 - 09:40: 킥오프 및 오프닝</p>
-                    <p>09:40 - 10:20: Amazon Culture of Innovation</p>
-                    <p>10:20 - 11:00: The Innovator's Mindset</p>
-                    <p>11:00 - 11:15: Coffee Break</p>
-                    <p>11:15 - 12:00: Innovation Unleashed</p>
-                    <p>12:00 - 13:15: Lunch</p>
-                    <p>13:15 - 18:00: WB Activity</p>
-                </div>
-            </div>
-            <div id="day2" class="agenda-content">
-                <div class="agenda-card">
-                    <h3>Day 2. 09:30 - 18:00</h3>
-                    <p>09:30 - 10:00: Day 1 Wrap up</p>
-                    <p>10:00 - 10:50: 솔루션 아이디어</p>
-                    <p>11:00 - 12:00: 솔루션 아이디어 및 기획</p>
-                    <p>12:00 - 13:15: Lunch</p>
-                    <p>13:15 - 14:15: 솔루션 기획</p>
-                    <p>14:25 - 15:30: 솔루션 발표</p>
-                    <p>15:30 - 15:50: Coffee Break</p>
-                    <p>15:50 - 17:00: PR/FAQ 작성</p>
-                    <p>17:00 - 18:00: 워크샵 최고 및 마무리</p>
-                </div>
-            </div>
-        </section>       
-
-        <section class="speakers my-5" id="speakers">
-            <h2 class="section-title">Speakers</h2>
-            <div class="row">
-                <div class="col-md-2 col-sm-4 mb-4">
-                    <div class="speaker">
-                        <img src="/images/Speaker_1.png" class="img-fluid" alt="Younsik Kim">
-                    </div>
-                    <p>Younsik Kim</p>
-                    <p>Cross Enterprise Head</p>
-                </div>
-                <div class="col-md-2 col-sm-4 mb-4">
-                    <div class="speaker">
-                        <img src="/images/Speaker_2.png" class="img-fluid" alt="HyunSuk Lee">
-                    </div>
-                    <p>HyunSuk Lee</p>
-                    <p>Go-To-Market Head</p>
-                </div>
-                <div class="col-md-2 col-sm-4 mb-4">
-                    <div class="speaker">
-                        <img src="/images/Speaker_3.png" class="img-fluid" alt="Richard Taylor">
-                    </div>
-                    <p>Richard Taylor</p>
-                    <p>APJ Innovation Programs Head</p>
-                </div>
-                <div class="col-md-2 col-sm-4 mb-4">
-                    <div class="speaker">
-                        <img src="/images/Speaker_4.png" class="img-fluid" alt="ChoongYil Kim">
-                    </div>
-                    <p>ChoongYil Kim</p>
-                    <p>Korea Innovation Programs Head</p>
-                </div>
-                <div class="col-md-2 col-sm-4 mb-4">
-                    <div class="speaker">
-                        <img src="/images/Speaker_5.png" class="img-fluid" alt="Joohong Kim">
-                    </div>
-                    <p>Joohong Kim</p>
-                    <p>Head of Prototyping Korea</p>
-                </div>
-                <div class="col-md-2 col-sm-4 mb-4">
-                    <div class="speaker">
-                        <img src="/images/Speaker_6.png" class="img-fluid" alt="Yooyeon Kim">
-                    </div>
-                    <p>Yooyeon Kim</p>
-                    <p>Innovation Specialist</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="location my-5" id="location">
-            <h2 class="section-title">Location</h2>
-            <p>서울 서초구 신반포로 176<br>JW 메리어트 호텔 서울 3층</p>
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.559110509388!2d126.99455471565004!3d37.50470127980947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca10a6b1b88c5%3A0xfdd9f6a22f2c4b45!2sJW%20Marriott%20Hotel%20Seoul!5e0!3m2!1sen!2skr!4v1688453964273!5m2!1sen!2skr"
-                    allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+        <%- include('components/index/intro') %>
+        <%- include('components/index/agenda') %>
+        <%- include('components/index/speakers') %> <!-- 스피커 섹션 추가 -->
+        <%- include('components/index/sponsors') %> <!-- 스폰서 섹션 추가 -->
+        <%- include('components/index/information') %> <!-- Infomation 섹션 추가 -->
+        <%- include('components/index/location') %> <!-- Location 섹션 추가 -->
     </main>
 
-    <footer class="footer">
-        <p class="mb-0">Copyright © 2024 Corporation. All rights reserved.</p>
-    </footer>
+    <%- include('components/index/footer') %>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>행사 참가 안내</h2>
+            <p>행사에 참가하시면 소정의 선물을 드립니다!</p>
+            <img src="/images/gift_image.png" alt="Gift Image">
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
